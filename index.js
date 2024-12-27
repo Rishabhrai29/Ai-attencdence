@@ -1,5 +1,6 @@
 const URL = "https://teachablemachine.withgoogle.com/models/8CdHwbPvL/";
 
+
 let model, webcam, labelContainer, maxPredictions;
 
 // Load the image model and setup the webcam
@@ -65,7 +66,7 @@ function markAttendance() {
         const [name] = recognizedPerson.split(': ');
         const attendanceList = document.getElementById('attendanceList');
         const listItem = document.createElement('div');
-        listItem.textContent = `${name} - ${new Date().toLocaleString()}`;
+        listItem.textContent =` ${name} - ${new Date().toLocaleString()}`;
         attendanceList.appendChild(listItem);
     } else {
         alert('No person recognized with high confidence. Please try again.');
